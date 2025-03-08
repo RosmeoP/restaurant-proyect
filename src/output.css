@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.12 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -217,14 +217,14 @@
   .\@container {
     container-type: inline-size;
   }
-  .\@container-\[inline-size\] {
-    container-type: inline-size;
-  }
   .pointer-events-auto {
     pointer-events: auto;
   }
   .pointer-events-none {
     pointer-events: none;
+  }
+  .\!visible {
+    visibility: visible !important;
   }
   .collapse {
     visibility: collapse;
@@ -255,6 +255,9 @@
     overflow: visible;
     clip: auto;
     white-space: normal;
+  }
+  .\!relative {
+    position: relative !important;
   }
   .absolute {
     position: absolute;
@@ -552,9 +555,6 @@
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
-  }
-  .w-1\/2 {
-    width: calc(1/2 * 100%);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -1237,21 +1237,6 @@
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
-  .bg-\(--my_variable\) {
-    background-color: var(--my_variable);
-  }
-  .bg-\(color\:--my-color\) {
-    background-color: var(--my-color);
-  }
-  .bg-\[\#0088cc\] {
-    background-color: #0088cc;
-  }
-  .bg-\[color\:var\(--my-color\)\] {
-    background-color: var(--my-color);
-  }
-  .bg-\[var\(--my_variable\)\] {
-    background-color: var(--my_variable);
-  }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
@@ -1270,14 +1255,8 @@
   .bg-amber-700 {
     background-color: var(--color-amber-700);
   }
-  .bg-amber-700\/80 {
-    background-color: color-mix(in oklab, var(--color-amber-700) 80%, transparent);
-  }
   .bg-amber-800 {
     background-color: var(--color-amber-800);
-  }
-  .bg-amber-800\/70 {
-    background-color: color-mix(in oklab, var(--color-amber-800) 70%, transparent);
   }
   .bg-amber-900 {
     background-color: var(--color-amber-900);
@@ -1309,23 +1288,11 @@
   .bg-gray-700 {
     background-color: var(--color-gray-700);
   }
-  .bg-gray-700\/70 {
-    background-color: color-mix(in oklab, var(--color-gray-700) 70%, transparent);
-  }
-  .bg-gray-700\/80 {
-    background-color: color-mix(in oklab, var(--color-gray-700) 80%, transparent);
-  }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
-  }
-  .bg-red-500\/50 {
-    background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
-  }
-  .bg-red-500\/\[50\%\] {
-    background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1720,15 +1687,6 @@
   .whitespace-pre-wrap {
     white-space: pre-wrap;
   }
-  .\[color\:red\] {
-    color: red;
-  }
-  .\[color\:red\]\/50 {
-    color: color-mix(in oklab, red 50%, transparent);
-  }
-  .\[color\:red\]\/50\! {
-    color: color-mix(in oklab, red 50%, transparent) !important;
-  }
   .text-amber-50 {
     color: var(--color-amber-50);
   }
@@ -1966,7 +1924,6 @@
     --tw-inset-shadow-color: initial;
   }
   .outline-hidden {
-    --tw-outline-style: none;
     outline-style: none;
     @media (forced-colors: active) {
       outline: 2px solid transparent;
@@ -2004,6 +1961,9 @@
   .sepia {
     --tw-sepia: sepia(100%);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .\!filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,) !important;
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -2236,30 +2196,6 @@
   .transform-view {
     transform-box: view-box;
   }
-  .hover\:scale-105 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 105%;
-        --tw-scale-y: 105%;
-        --tw-scale-z: 105%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:bg-amber-500 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-amber-500);
-      }
-    }
-  }
-  .hover\:bg-blue-600 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-600);
-      }
-    }
-  }
   .hover\:bg-gray-400 {
     &:hover {
       @media (hover: hover) {
@@ -2267,25 +2203,10 @@
       }
     }
   }
-  .hover\:text-amber-200 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-amber-200);
-      }
-    }
-  }
   .hover\:text-amber-300 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-amber-300);
-      }
-    }
-  }
-  .hover\:shadow-2xl {
-    &:hover {
-      @media (hover: hover) {
-        --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
   }
@@ -2312,11 +2233,6 @@
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
-    }
-  }
-  .md\:grid-cols-2 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .md\:grid-cols-3 {

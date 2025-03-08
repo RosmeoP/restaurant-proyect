@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss build src/input.css -o src/output.css",
-    "start": "npm run build && npx serve src"
-  },
+  "build": "npx tailwindcss build src/input.css -o src/output.css",
+  "start": "npm run build && npx serve src"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
