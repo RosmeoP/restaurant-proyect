@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Tailwind CSS output
+dist/output.css
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Environment variables
+.env
